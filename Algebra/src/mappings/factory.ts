@@ -45,6 +45,7 @@ export function handlePoolCreated(event: PoolEvent): void {
   let token1 = Token.load(token1_address.toHexString())
 
 
+  // Not sure why we're swapping addresses? -Derek 6/13/2023
   if(pools_list.includes(event.params.pool.toHexString())){
     token0 = Token.load(event.params.token1.toHexString())
     token1 = Token.load(event.params.token0.toHexString())
